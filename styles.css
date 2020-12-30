@@ -1,10 +1,91 @@
+body, html{
+    font-size: small;
+    height: 100%;
+}
+body{
+    background: #fff;
+    color: #202124;
+    font-family: arial,sans-serif;
+}
+header{
+    font-size: 13px;
+    padding-top: 8px;
+}
+.nav .nav_items{
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: row;
+    justify-content: flex-end;
+    width: calc(100% - 20px);
+    height:auto;
+}
+.nav .nav_items .inside_nav{
+    display: flex;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+    align-self: auto;
+}
+.nav{
+    width: 100%;
+}
+.nav .nav_items div{
+    padding: 10px;
+}
+.curser_top{
+    cursor: pointer;
+}
+.a_top:hover{
+    text-decoration: underline;
+    opacity: 0.85;
+}
+.svg_top:hover>svg>path{
+    fill: black;
+}
 #svg_more{
     height: 24px;
     width: 24px;
     fill:#70757a;
 }
+main .input{
+    position: relative;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+}
+.input input{
+    background: transparent;
+    border: none;
+    width: 90%;
+    align-self: center;
+    justify-content: flex-start;
+}
+.input svg{
+    align-self: center;
+}
+svg{
+    width: 24px;
+    height: 24px;
+}
 #options{
     height: 24px;
     width: 24px;
     fill:#70757a;
+}
+#prof_pic{
+    border-radius: inherit;
+}
+.profile_pic{
+    border-radius: 50%;
+}
+div>img{
+    border-radius: inherit
+}
+header a{
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+    line-height: 24px;
 }
