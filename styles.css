@@ -1,6 +1,7 @@
 body, html{
     font-size: small;
     height: 100%;
+    width: 100%;
 }
 body{
     background: #fff;
@@ -9,12 +10,11 @@ body{
 }
 header{
     font-size: 13px;
-    padding-top: 8px;
+    padding-top: 15px;
 }
 .nav .nav_items{
     display: flex;
     flex: 1 1 auto;
-    flex-wrap: row;
     justify-content: flex-end;
     width: calc(100% - 20px);
     height:auto;
@@ -24,7 +24,10 @@ header{
     height: auto;
     padding: 0px;
     margin: 0px;
-    align-self: auto;
+    align-self: stretch;
+}
+.inside_nav>a{
+    padding-right: 15px;
 }
 .nav{
     width: 100%;
@@ -35,7 +38,7 @@ header{
 .curser_top{
     cursor: pointer;
 }
-.a_top:hover{
+a:hover{
     text-decoration: underline;
     opacity: 0.85;
 }
@@ -84,8 +87,42 @@ svg{
 div>img{
     border-radius: inherit
 }
-header a{
+a{
     color: rgba(0, 0, 0, 0.87);
     text-decoration: none;
     line-height: 24px;
+}
+footer{
+    background-color: #f2f2f2;
+}
+footer a{
+    color: #70757a;
+    opacity: 0.85;
+    padding-left: 27px;
+    font-size: 14px;
+}
+.main_container{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+.footer_nav{
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-content: center;
+    height: 40px;
+    border-top: 1px solid #dadce0;
+}
+.footer_left{
+    align-self: center;
+}
+.footer_right{
+    margin-right: 27px;
+    align-self: center;
+}
+.footer_nav a:hover{
+    color: #70757a;
+    opa
 }
