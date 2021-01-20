@@ -52,12 +52,14 @@ a:hover{
 }
 main .input{
     position: relative;
-    border: 2px solid lightgray;
-    border-radius: 10px;
+    border: 1px solid lightgray;
+    border-radius: 24px;
     width: fit-content;
     display: flex;
     flex-direction: row-reverse;
     justify-content: right;
+    width: 100%;
+    height: 3.3rem;
 }
 .input input{
     background: transparent;
@@ -68,6 +70,12 @@ main .input{
 }
 .input svg{
     align-self: center;
+    padding-right: 20px;
+    padding-left: 10px;
+}
+.input:hover{
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+    border-color: rgba(223,225,229,0);
 }
 svg{
     width: 24px;
@@ -124,5 +132,69 @@ footer a{
 }
 .footer_nav a:hover{
     color: #70757a;
-    opa
+}
+input:focus{
+    outline: none;
+}
+.grid_container{
+    display: grid;
+    grid-template-columns: 1fr 80% 1fr;
+    grid-template-rows: 2fr 140px 3fr;
+    grid-template-areas:
+        ". logo ."
+        ". search ."
+        ". info .";
+    place-items: center;
+}
+#logo{
+    grid-area: logo;
+    align-self: end;
+    margin-top: 30px;
+}
+#search{
+    grid-area: search;
+    width: -webkit-fill-available;
+    max-width: 582px;
+}
+#info{
+    grid-area: info;
+    align-self: start;
+}
+.btn_wraper{
+    display: flex;
+    justify-content: center;
+}
+.btn {
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    height: 36px;
+}
+.btn:hover{
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+#info a{
+    color: #1a0dab;
+    padding-left: 3px;
+}
+#info a:hover{
+    opacity: 0.95;
+}
+@media (max-width: 665px){
+    .footer_nav{
+        flex-direction: column;
+    }
+    .footer_right{
+        margin-right: 0px;
+    }
+    .footer_nav>.footer_left>a:last-child{
+        display: none;
+    }
 }
